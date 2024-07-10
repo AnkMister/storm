@@ -1,0 +1,20 @@
+Interview Processing Module: 
+Converts process owner transcript into usable information about the given SOP topic.
+
+Section Generation Module: 
+Organizes the collected information by generating a hierarchical outline for the SOP. Clear MECE structure between sections.
+
+Article Generation Assistant Module: 
+Populates the generated outline with the collected information. Goes as much detail as possible, allocates citations and information to Section Updater. 
+
+Article Reviewer Module: 
+Refines and enhances the written article for better presentation. PROVIDES FEEDBACK TO SECTION UPDATER. 
+
+Section Updater Module: (looped)
+Revise and improves each section based on additional context and feedback for that section. 
+
+
+>> The key value for all of this lies in our UI piece to actually make the drafting easier. We do preprocessing, allow them to confirm the sections and subsections based on the high level structure that all SOPs should follow. And then draft each SOP. 
+Once the initial draft is done, we improve the responses by pointing out inaccuracies and such. Can include an LLM-as-a-judge loop for all generation so initial and updated output is as good as possible. 
+For initial - 'does it match source instruction content?'
+for update - 'does it match base + updated context'
